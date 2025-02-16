@@ -30,6 +30,4 @@ public class UserDaoImp implements UserDao {
       return sessionFactory.getCurrentSession().createQuery("select a from User a join a.car b where b.model=:model and b.series=:series", User.class)
               .setParameter("model", model).setParameter("series", series).getSingleResult();
    }
-
-
 }
